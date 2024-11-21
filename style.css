@@ -1,7 +1,9 @@
 * {
     color: rgba(49, 49, 49, 1);
-    font-family: "Merriweather", serif;
-    font-size: 60px;
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    line-height: 1.2;
 }
 
 /* HEADER */
@@ -9,6 +11,7 @@
     height: 700px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .header__image {
@@ -25,10 +28,8 @@
 
 .header-container {
     width: 1366px;
-    height: 100%;
     margin: 0 auto;
-    padding-top: 26px;
-    padding-left: 72px;
+    padding: 26px 72px;
     display: flex;
     flex-direction: column;
     gap: 62px;
@@ -49,7 +50,6 @@
 }
 
 .header__logo-text {
-    font-family: "Golos Text", sans-serif;
     font-weight: 700;
     font-size: 16.65px;
     color: rgba(89, 86, 83, 1);
@@ -72,6 +72,13 @@
 .header__content-headline-text {
     display: flex;
     flex-direction: column;
+}
+
+.header__content-headline_center,
+.header__content-headline_right,
+.header__content-headline_left {
+    font-family: "Merriweather", serif;
+    font-size: 60px;
     line-height: 1.10;
 }
 
@@ -85,7 +92,6 @@
 
 .header__content-headline-note {
     text-align: center;
-    font-family: "Golos Text", sans-serif;
     font-size: 18px;
 }
 
@@ -101,13 +107,12 @@
     padding: 0 49px;
     border-radius: 66px;
     border: none;
-    font-family: "Golos Text", sans-serif;
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.3;
     transition: 0.4s ease;
     transition-property: color, background-color, border;
     cursor: pointer;
-
 }
 
 .header__content-buttons-support:hover,
@@ -139,8 +144,338 @@
 .header__content-buttons-details span {
     display: block;
     height: 32px;
-    font-family: "Golos Text", sans-serif;
-    font-size: 16px;
     line-height: 1.3;
 }
 
+/* RUNNING LINE */
+.running-line {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(245, 73, 50, 1);
+    overflow: hidden;
+    padding: 0 12px;
+}
+
+.running-line__content {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    min-width: max-content;
+}
+
+.running-line__text {
+    font-family: "Merriweather", serif;
+    font-size: 22px;
+    color: white;
+}
+
+.running-line__separator {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+/* MAIN */
+
+/* Support */
+.main__support {
+    margin: 80px auto 64px auto;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    max-width: 1222px;
+}
+
+.main__support__text,
+.main_highlighting {
+    font-family: "Merriweather", serif;
+    font-size: 36px;
+    line-height: 1.35;
+}
+
+.main_highlighting {
+    color: rgba(245, 73, 50, 1);
+    font-weight: 700;
+}
+
+/* Details */
+.main__details {
+    margin: 0 auto;
+    max-width: 1222px;
+    display: flex;
+    gap: 17px;
+}
+
+.main__details__image img{
+    height: 528px;
+    margin-top: -27px;
+    margin-left: -27px;
+}
+
+.main__details__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__details__info-text {
+    font-family: "Merriweather", serif;
+    font-size: 36px;
+    line-height: 1.35;
+}
+
+.main__details__info-table table {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 48px;
+    border-collapse: collapse;
+    border: none;
+}
+
+.main__details__info-table table td {
+    border: 2px solid rgba(208, 208, 208, 1);
+    padding: 16px;
+    padding-left: 0;
+}
+
+.main__details__info-table table tr td:first-child {
+    opacity: 70%;
+}
+
+.main__details__info-table table tr td:last-child {
+    font-weight: 600;
+    padding: 16px;
+}
+
+.main__details__info-table table tr td:first-child {
+    width: 306px;
+}
+
+.main__details__info-table table tr:first-child td {
+    border-top: none;
+}
+
+.main__details__info-table table tr:last-child td {
+    border-bottom: none;
+}
+
+.main__details__info-table table tr td:first-child {
+    border-left: none;
+}
+
+.main__details__info-table table tr td:last-child {
+    border-right: none;
+}
+
+.main__details__info-table table tr:last-child td span {
+    text-decoration: line-through;
+    color: rgba(245, 73, 50, 1);
+    margin-right: 12px;
+}
+
+.main__details__info-link a{
+    color: rgba(48, 87, 162, 1);
+    text-decoration: none;
+}
+
+/* Stages */
+.main__stages {
+    margin: 200px auto;
+    max-width: 1222px;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+
+.main__stages__header {
+    font-family: "Merriweather", serif;
+    font-size: 54px;
+    width: 806px;
+}
+
+.main__stages__header-link {
+    display: inline-block;
+    color: rgba(48, 87, 162, 1);
+    width: 280px;
+    cursor: pointer;
+}
+
+.main__stages__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 20px;
+}
+
+.main__stages__panel {
+    display: flex;
+    gap: 16px;
+    background: url("assets/main/stages-bg.webp");
+    background-position: -356px -101px;
+    padding: 20px;
+}
+
+.main__stages__panel-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.main__stages__panel-text {
+    font-weight: 500;
+}
+
+.main__stages__panel_double-row {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.main__stages__panel_double-column {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    background-position: -20px -20px;
+}
+
+.main__stages__image-container {
+    position: relative;
+    width: 290px;
+    flex-shrink: 0;
+}
+
+.main__stages__image {
+    position: absolute;
+    bottom: -22px;
+    left: -30px;
+}
+
+/* Participants */
+.main__participants {
+    margin: 0 auto 140px auto;
+    max-width: 1222px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.main__participants__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__participants__header-text {
+    font-family: "Merriweather", serif;
+    font-size: 54px;
+}
+
+.main__participants__header__buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.main__participants__header__button {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: rgba(49, 49, 49, 1);
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+    transition-property: background-color;
+    cursor: pointer;
+}
+
+.main__participants__header__button:hover {
+    background-color: rgba(251, 206, 81, 1);
+}
+
+.main__participants__header__button img {
+    height: 16.92px;
+}
+
+.main__participants__header__pages {
+    font-size: 16px;
+}
+
+.main__participants__header__pages span {
+    font-size: 16px;
+    opacity: 60%;
+}
+
+.main__participants__list {
+    margin: 0 auto;
+    max-width: 1222px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.main__participants__list__item {
+    width: 394px;
+    height: 462px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.main__participants__list__item-image {
+    margin: 0 auto;
+}
+
+.main__participants__list__item-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 28px auto 4px auto;
+}
+
+.main__participants__list__item-title {
+    margin: 0 auto;
+    opacity: 60%;
+}
+
+.main__participants__list__item-about {
+    margin: auto auto 0 auto;
+    padding: 0 12px;
+    height: 35px;
+    font-size: 16px;
+    border: 1px solid rgba(48, 87, 162, 1);
+    border-radius: 62px;
+    color: rgba(48, 87, 162, 1);
+    background: none;
+    transition: 0.4s ease;
+    transition-property: background-color, border;
+    cursor: pointer;
+}
+
+.main__participants__list__item-about:hover {
+    background-color: rgba(48, 87, 162, 1);
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background-color: rgba(233, 222, 212, 1);
+    padding-top: 40px;
+    padding-bottom: 72px;
+}
+
+.footer__text {
+    margin: 0 auto;
+    max-width: 1222px;
+    font-size: 16px;
+    opacity: 60%;
+}
