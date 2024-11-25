@@ -1,0 +1,21 @@
+/* Details */
+.info-table__item {
+    flex-wrap: wrap;
+}
+
+.info-table__item-label {
+    width: auto;
+    border-right: none;
+}
+
+.info-table__item-value {
+    padding-left: 0;
+}
+
+/* STAGES */
+
+
+/* PARTICIPANTS */
+.main__participants__list__item {
+    width: calc((100vw - 40px) / 2)
+}
