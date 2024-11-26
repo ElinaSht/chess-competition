@@ -298,6 +298,8 @@ body {
 
 .line_through {
     text-decoration: line-through rgba(245, 73, 50, 1);
+    -webkit-text-decoration-line: line-through;
+    -webkit-text-decoration-color: rgba(245, 73, 50, 1);
     margin-right: 12px;
 }
 
